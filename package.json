@@ -1,0 +1,21 @@
+{
+  "name": "kenya-projects",
+  "version": "1.0.0",
+  "description": "An interactive map showing data on donor and government funded projects in Kenya.",
+  "main": "bundle.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "browserify js/main.js -o bundle.js",
+    "watch": "watchify js/main.js -o bundle.js --debug --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mackers/kenya-projects.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mackers/kenya-projects/issues"
+  },
+  "homepage": "https://github.com/mackers/kenya-projects#readme"
+}
