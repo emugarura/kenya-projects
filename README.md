@@ -21,27 +21,36 @@ This software plots each government project on a map of Kenya. Features:
 
 ## Data Processing
 
-A script to process data is in scripts/
+A script to process data is in `scripts/`
 
-See also: scripts/README.md
+See also: `scripts/README.md`
 
 ## Installation
 
 1. Install web components from npm (for the processing script) and bower (for
    the web map):
 
-  $ npm install
-  $ bower install
+  * `npm install`
+  * `bower install`
 
 2. Compile javascript using browserify (install if necessary):
   
-  $ npm install -g browserify
-  $ browserify js/main.js -o bundle.js
+  * `npm install -g browserify`
+  * `browserify js/main.js -o bundle.js`
 
 3. The web app must be run from a http server (as it loads assets over AJAX):
 
-  $ npm install http-server -g
-  $ http-server
+  * `npm install http-server -g`
+  * `http-server`
+
+## Future Work
+
+A novel way to visualize the data would be to implement a heat map showing
+where projects are most overdue.
+
+This would be useful for examining patterns in project overruns and to
+determine where effort should be applied to prevent project mismanagement in
+certain areas.
 
 ## References
 
