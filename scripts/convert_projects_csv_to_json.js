@@ -51,10 +51,11 @@ var parser = csv.parse({columns: columns}, function(err, data) {
       data[i]['endDateActual'] = moment(data[i]['endDateActual'], 'MM/DD/YYYY hh:mm:ss aa');
     }
 
+    data[i]['totalProjectCost'] = parseFloat(data[i]['totalProjectCost']);
+
     delete data[i]['EPGeoName'];
     delete data[i]['location1_EProMIS'];
     delete data[i]['projectCostYearlyBreakdown'];
-    delete data[i]['totalProjectCost'];
     delete data[i]['approvalDate'];
     delete data[i]['startDatePlanned'];
     delete data[i]['startDateActual'];

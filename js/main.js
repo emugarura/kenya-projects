@@ -14,11 +14,13 @@ $(function () {
   layers.tiles = require('./layers/tiles-layer');
   layers.markers = require('./layers/markers-layer')();
   layers.clusters = require('./layers/clusters-layer')();
-  layers.counties = require('./layers/counties-layer')();
+  layers.projectsPerCounty = require('./layers/counties-layer')();
+  layers.avgCostPerCounty = require('./layers/avgcost-layer')();
 
   layers.tiles.addTo(map);
   layers.markers.addTo(map);
-  layers.counties.addTo(map);
+  layers.projectsPerCounty.addTo(map);
+  layers.avgCostPerCounty.addTo(map);
 
   var filterGroups = {
     all: require('./filters/all-filter')(),
@@ -29,11 +31,13 @@ $(function () {
   controls.legend = require('./controls/legend-control');
   controls.cluster = require('./controls/cluster-control');
   controls.filter = require('./controls/filtered-layer-control')(filterGroups);
+  controls.counties = require('./controls/county-layer-control')([layers.projectsPerCounty, layers.avgCostPerCounty]);
   
   controls.info.addTo(map);
   controls.legend.addTo(map);
   controls.cluster.addTo(map);
   controls.filter.addTo(map);
+  controls.counties.addTo(map);
 
   map.on('hideLayer', function (e) {
     if (layers[e.layer]) {
