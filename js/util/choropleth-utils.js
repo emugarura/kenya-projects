@@ -1,9 +1,9 @@
 module.exports.projectCountToColour = function (d) {
-  return d > 50 ? '#800026' :
-  d > 40  ? '#FC4E2A' :
-  d > 30   ? '#FD8D3C' :
-  d > 20   ? '#FEB24C' :
-  d > 10   ? '#FED976' :
-  '#FFEDA0';
+  return d > 50 ? '#810f7c' :
+  d > 40  ? '#8856a7' :
+  d > 30   ? '#8c96c6' :
+  d > 20   ? '#9ebcda' :
+  d > 10   ? '#bfd3e6' :
+  '#edf8fb';
 };
 
