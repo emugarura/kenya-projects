@@ -16,7 +16,6 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "~3.3.6",
     "font-awesome": "~4.5.0",
     "jquery": "~2.2.0",
     "leaflet": "~0.7.7",
