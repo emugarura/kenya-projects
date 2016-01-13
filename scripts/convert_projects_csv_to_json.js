@@ -1,5 +1,6 @@
 var fs = require('fs');
 var csv = require('csv');
+var moment = require('moment');
 
 var columns = [
 "id",
@@ -42,6 +43,14 @@ var parser = csv.parse({columns: columns}, function(err, data) {
       data[i]['lng'] = bits[1];
     }
 
+    if (data[i]['endDatePlanned']) {
+      data[i]['endDatePlanned'] = moment(data[i]['endDatePlanned'], 'MM/DD/YYYY hh:mm:ss aa');
+    }
+
+    if (data[i]['endDateActual']) {
+      data[i]['endDateActual'] = moment(data[i]['endDateActual'], 'MM/DD/YYYY hh:mm:ss aa');
+    }
+
     delete data[i]['EPGeoName'];
     delete data[i]['location1_EProMIS'];
     delete data[i]['projectCostYearlyBreakdown'];
@@ -49,8 +58,6 @@ var parser = csv.parse({columns: columns}, function(err, data) {
     delete data[i]['approvalDate'];
     delete data[i]['startDatePlanned'];
     delete data[i]['startDateActual'];
-    delete data[i]['endDatePlanned'];
-    delete data[i]['endDateActual'];
     delete data[i]['duration'];
     delete data[i]['durationMonths'];
     delete data[i]['ngProgramme'];
