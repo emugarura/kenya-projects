@@ -10,10 +10,14 @@ This software plots each government project on a map of Kenya. Features:
 * Map layer showing a choropleth of number of projects per county in Kenya.
 * Map layer showing a choropleth of avg. cost of project per county.
 
+A working version of the map is available here:
+
+http://kenya.earthhack.org/
+
 ## Motivations
 
-The project was developed in order to maximize reuse of existing libraries.
-This will help to reduce work load and to minimize bugs in the code.
+The project was developed to maximize reuse of existing libraries.  This will
+help to reduce work load and to minimize bugs in the code.
 
 The browserify library was employed to allow for modularization of the code,
 ensuring each module was self contained and to increase overall maintainability
@@ -30,7 +34,7 @@ of the code.
 
 ## Data Processing
 
-A script to process data is in `scripts/`
+A script to process and reduce incoming data is in `scripts/`
 
 See also: `scripts/README.md`
 
@@ -55,9 +59,13 @@ See also: `scripts/README.md`
 ## Future Work
 
 A novel way to visualize the data would be to implement a heat map showing
-where projects are most overdue. This would be useful for examining patterns in
-project overruns and to determine where effort should be applied to prevent
-project mismanagement in certain areas.
+where projects are most overdue.
+
+This would be useful for examining patterns in project overruns and to
+determine where effort should be applied to prevent project mismanagement in
+certain areas.
+
+## Alternative Implementations
 
 Some effort was made into developing the project with the `EmberJS` framework.
 This was intended to ensure any future scaling of the project would be made
@@ -72,8 +80,10 @@ and the prototype was shelved.
 
 ## References
 
-Help and code samples taken from the following:
+Data, help and code samples taken from the following:
 
+* https://www.opendata.go.ke/-National-Accounts-And-Inflation/Donor-and-Government-funded-projects-map-2013-2015/5mtp-qs2h
+* https://github.com/mikelmaron/kenya-election-data/blob/master/data/counties.geojson
 * http://leafletjs.com/examples/choropleth.html
 * https://cartodb.com/basemaps/
 * http://gis.stackexchange.com/questions/98003/leaflet-custom-control-fails
