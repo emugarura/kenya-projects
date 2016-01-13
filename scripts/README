@@ -1,7 +1,7 @@
 convert_projects_csv_to_json.js
 ===============================
 
-Script to convert Kenya projects CSV format to JSONAPI format suitable for consumption by Ember-Data
+Script to convert Kenya projects CSV format to standard JSONAPI format.
 
 Example usage:
 

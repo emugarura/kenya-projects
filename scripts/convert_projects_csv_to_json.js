@@ -41,6 +41,25 @@ var parser = csv.parse({columns: columns}, function(err, data) {
       data[i]['lat'] = bits[0];
       data[i]['lng'] = bits[1];
     }
+
+    delete data[i]['EPGeoName'];
+    delete data[i]['location1_EProMIS'];
+    delete data[i]['projectCostYearlyBreakdown'];
+    delete data[i]['totalProjectCost'];
+    delete data[i]['approvalDate'];
+    delete data[i]['startDatePlanned'];
+    delete data[i]['startDateActual'];
+    delete data[i]['endDatePlanned'];
+    delete data[i]['endDateActual'];
+    delete data[i]['duration'];
+    delete data[i]['durationMonths'];
+    delete data[i]['ngProgramme'];
+    delete data[i]['vision2030FlagshipMinistry'];
+    delete data[i]['vision2030FlagshipProjectProgramme'];
+    delete data[i]['implementingAgency'];
+    delete data[i]['implementationStatus'];
+    delete data[i]['mtefSector'];
+    delete data[i]['workPlanProgress'];
   }
 
   data = { projects: data };

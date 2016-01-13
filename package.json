@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/mackers/kenya-projects/issues"
   },
-  "homepage": "https://github.com/mackers/kenya-projects#readme"
+  "homepage": "https://github.com/mackers/kenya-projects#readme",
+  "dependencies": {
+    "csv": "^0.4.6"
+  }
 }
